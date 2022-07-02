@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
-function SearchBar(props){
+interface SearcBarProps {
+    handleSearch: Function
+}
+
+function SearchBar(props: SearcBarProps){
     let [searchTerm, setSearchTerm] = useState('')
 
     return (

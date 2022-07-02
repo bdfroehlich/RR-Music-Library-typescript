@@ -1,6 +1,19 @@
 import { useState } from 'react'
 
-function GalleryItem(props){
+export interface GalleryInfo {
+    trackName: string,
+    collectionName: string,
+    primaryGenreName: string,
+    releaseDate: string,
+    artworkUrl100: string
+}
+
+interface GalleryItemProps {
+    item: GalleryInfo,
+    key: number
+}
+
+function GalleryItem(props: GalleryItemProps){
     let [view, setView] = useState(false)
 
     const simpleView = () => {
